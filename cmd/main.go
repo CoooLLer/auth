@@ -45,12 +45,12 @@ func (s *server) Create(_ context.Context, in *desc.CreateUserIn) (*desc.CreateU
 func (s *server) Update(_ context.Context, in *desc.UpdateUserIn) (*emptypb.Empty, error) {
 	log.Printf("Received request to update user")
 	log.Println(in)
-	return nil, nil
+	return &emptypb.Empty{}, nil
 }
 
 func (s *server) Delete(_ context.Context, in *desc.DeleteUserIn) (*emptypb.Empty, error) {
 	log.Printf("Received request to delete user: %d", in.Id)
-	return nil, nil
+	return &emptypb.Empty{}, nil
 }
 
 func main() {
